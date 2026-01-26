@@ -56,14 +56,19 @@
                 <div class="hidden md:block w-24"></div>
                 
                 <img src="logo.png" alt="Logo" onerror="this.style.display='none'" 
-                    class="h-12 w-auto object-contain md:h-24 md:absolute md:left-14 drop-shadow-md z-10">
+                    class="h-16 w-auto object-contain md:h-24 md:absolute md:top-2 md:left-6 drop-shadow-md z-10">
 
                 <div class="flex flex-col border-l-2 border-emerald-100 pl-3 md:pl-4 whitespace-nowrap">
-                    <div><span class="decorative-new" style="margin-bottom: -5px; display: block;">New</span></div>
+                    <div>
+                        <span class="decorative-new" style="margin-bottom: -5px; display: block;">New</span>
+                    </div>
                     
                     <span class="text-lg md:text-xl font-black text-emerald-900 tracking-tight uppercase leading-tight">Al Haramain</span>
                     
-                    <span class="text-[15px] md:text-sm font-bold text-yellow-600 uppercase mt-0 leading-none">Tours & Travels</span>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] md:text-sm font-bold text-yellow-600 uppercase mt-0 leading-none">Tours & Travels</span>
+                        <span class="text-[7px] md:text-[9px] font-bold text-emerald-700 uppercase tracking-widest mt-0.5">Haj Group Organiser</span>
+                    </div>
                 </div>
             </div>
 
@@ -97,10 +102,13 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="p-8 rounded-3xl bg-emerald-50 border border-emerald-100 transition-all group" data-aos="fade-up">
-                    <div class="w-12 h-12 mb-6 text-emerald-700 group-hover:scale-110 transition-transform">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <div class="mb-6 group-hover:scale-110 transition-transform">
+                        <img src="ksa-hajj-logo.png" 
+                            alt="KSA Ministry of Hajj" 
+                            class="w-21 h-21 object-contain">
                     </div>
-                    <h4 class="font-bold text-emerald-900 mb-1">KSA Registered</h4>
+                    
+                    <h4 class="font-bold text-emerald-900 mb-1 text-lg">KSA Registered</h4>
                     <p class="text-[10px] uppercase font-bold text-emerald-600/60 tracking-widest mb-3">Ministry of Hajj & Umrah</p>
                     <p class="text-slate-500 text-sm">Official authorized organizer for groups from India.</p>
                 </div>
@@ -115,8 +123,11 @@
                 </div>
 
                 <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 mb-6 text-emerald-600 group-hover:scale-110 transition-transform">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <div class="mb-6 group-hover:scale-110 transition-transform">
+                        <img src="moma-logo.png" 
+                            alt="MOMA Logo" 
+                            class="w-40 h-40 object-contain"
+                            style="filter: sepia(1) saturate(5) hue-rotate(100deg) brightness(0.8);">
                     </div>
                     <h4 class="font-bold text-slate-800 mb-1">Govt. Recognized</h4>
                     <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-3">HGO Certified</p>
