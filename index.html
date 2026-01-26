@@ -43,7 +43,7 @@
             transform: rotate(-5deg);
             letter-spacing: 2px;
             text-transform: capitalize;
-            padding-bottom: 1px; /* Creates space so it doesn't overlap */
+            padding-bottom: 3px; /* Creates space so it doesn't overlap */
             opacity: 0.9;
         }
     </style>
@@ -51,16 +51,23 @@
 <body class="bg-white text-slate-900 font-sans">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-emerald-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="logo.png" alt="Logo" onerror="this.style.display='none'" class="h-20 w-auto object-contain absolute top-2 left-6 drop-shadow-md">
-                <div class="flex flex-col border-l-2 border-emerald-100 pl-4">
-                    <div><span class="decorative-new">New</span></div>
-                    <span class="text-xl font-black text-emerald-900 tracking-tight uppercase leading-none">Al Haramain</span>
-                    <span class="text-sm font-bold text-yellow-600 uppercase mt-1">Tours & Travels</span>
+        <div class="max-w-7xl mx-auto px-6 py-2 md:py-3 flex justify-between items-center relative">
+            <div class="flex items-center gap-2 md:gap-4">
+                <div class="hidden md:block w-24"></div>
+                
+                <img src="logo.png" alt="Logo" onerror="this.style.display='none'" 
+                    class="h-12 w-auto object-contain md:h-24 md:absolute md:left-14 drop-shadow-md z-10">
+
+                <div class="flex flex-col border-l-2 border-emerald-100 pl-3 md:pl-4 whitespace-nowrap">
+                    <div><span class="decorative-new" style="margin-bottom: -5px; display: block;">New</span></div>
+                    
+                    <span class="text-lg md:text-xl font-black text-emerald-900 tracking-tight uppercase leading-tight">Al Haramain</span>
+                    
+                    <span class="text-[15px] md:text-sm font-bold text-yellow-600 uppercase mt-0 leading-none">Tours & Travels</span>
                 </div>
             </div>
-            <div class="hidden md:flex items-center space-x-8 font-bold text-[11px] uppercase tracking-widest text-emerald-950">
+
+            <div class="hidden lg:flex items-center space-x-8 font-bold text-[11px] uppercase tracking-widest text-emerald-950">
                 <a href="#" class="hover:text-yellow-600 transition-colors">Home</a>
                 <a href="#holy-sites" class="hover:text-yellow-600 transition-colors">Holy Sites</a>
                 <a href="#requirements" class="hover:text-yellow-600 transition-colors">Checklist</a>
