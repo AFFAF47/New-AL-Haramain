@@ -178,15 +178,43 @@
     <div id="packageModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center px-4">
         <div class="absolute inset-0 bg-emerald-950/90 backdrop-blur-md" onclick="closeModal()"></div>
         <div class="relative bg-white w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl border border-emerald-100">
-            <div class="bg-emerald-900 p-8 text-white">
+            <div class="bg-emerald-900 p-8 text-white relative">
                 <button onclick="closeModal()" class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl">×</button>
-                <h3 id="pkgTitle" class="text-2xl font-serif mb-2">--</h3>
-                <p class="text-emerald-300 text-[10px] uppercase font-bold tracking-[0.2em]">⏳ Departure In: <span id="countdownText" class="text-white">--</span></p>
+                <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-widest block mb-2">Confirmed June Departure</span>
+                <h3 id="pkgTitle" class="text-3xl font-serif mb-1">Umrah Deluxe Package</h3>
+                <p class="text-emerald-300 text-xs font-medium italic">15 Days Spiritual Journey</p>
             </div>
-            <div class="p-8 text-center">
-                <p class="text-slate-500 mb-6">Details for the upcoming 2026 packages are being finalized. Click below to get the full itinerary and pricing on WhatsApp.</p>
+            
+            <div class="p-8">
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                        <p class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter mb-1">Departure</p>
+                        <p class="text-sm font-bold text-emerald-900">28th June</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                        <p class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter mb-1">Arrival</p>
+                        <p class="text-sm font-bold text-emerald-900">12th July</p>
+                    </div>
+                    <div class="col-span-2 bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100">
+                        <div class="flex justify-between items-center px-2">
+                            <div class="text-left">
+                                <p class="text-[9px] uppercase font-bold text-emerald-600 mb-1">Makkah Hotel</p>
+                                <p class="text-xs font-bold text-slate-800">Le Meridien Towers</p>
+                                <p class="text-[8px] text-yellow-600">★★★★★</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[9px] uppercase font-bold text-emerald-600 mb-1">Madinah Hotel</p>
+                                <p class="text-xs font-bold text-slate-800">Odst Al Madina</p>
+                                <p class="text-[8px] text-yellow-600">★★★ or Similar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-slate-500 text-sm text-center mb-6">Package price starts from <span class="text-emerald-700 font-bold">Rs. 1,05,000</span>. Includes flights (HYD-JED-HYD), 5-star Makkah stay, and guided tours.</p>
+                
                 <a id="pkgWhatsapp" href="#" class="w-full bg-emerald-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-600 transition-all shadow-lg">
-                    Contact via WhatsApp
+                    Book Now via WhatsApp
                 </a>
             </div>
         </div>
@@ -229,12 +257,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 1000 });
+        
         function openModal() {
-            document.getElementById('pkgTitle').innerText = "Haj & Umrah 2026";
-            document.getElementById('pkgWhatsapp').href = "https://wa.me/919866618803?text=Assalamu%20Alaikum,%20I%20want%20to%20know%20more%20about%20your%202026%20packages.";
+            // Setting the WhatsApp message to include the specific dates
+            const message = encodeURIComponent("Assalamu Alaikum, I am interested in your 15 Days Umrah Deluxe Package departing on 28th June. Please share more details.");
+            document.getElementById('pkgWhatsapp').href = "https://wa.me/919866618803?text=" + message;
+            
             document.getElementById('packageModal').classList.remove('hidden');
         }
-        function closeModal() { document.getElementById('packageModal').classList.add('hidden'); }
+
+        function closeModal() { 
+            document.getElementById('packageModal').classList.add('hidden'); 
+        }
     </script>
 </body>
 </html>
