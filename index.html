@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,68 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        
-        .hero-container { overflow: hidden; position: relative; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-container {
+            overflow: hidden;
+            position: relative;
+        }
+
         .hero-bg {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.8)), url('makkah.jpg');
-            background-size: cover; background-position: center;
+            background-size: cover;
+            background-position: center;
             animation: zoomOut 20s infinite alternate;
             z-index: -1;
         }
-        @keyframes zoomOut { from { transform: scale(1); } to { transform: scale(1.1); } }
 
-        .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); }
-        
+        @keyframes zoomOut {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
         .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background-color: #25d366;
-            color: #fff; border-radius: 50px; padding: 12px 25px; z-index: 100;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); display: flex; align-items: center; gap: 10px; font-weight: bold;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 25px;
+            z-index: 100;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
             animation: pulse-animation 2s infinite;
         }
+
         @keyframes pulse-animation {
-            0% { box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.5); }
-            100% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            0% {
+                box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
         }
 
         /* Fixed Decorative New Tag - No Overlap */
@@ -44,40 +84,50 @@
             transform: rotate(-5deg);
             letter-spacing: 2px;
             text-transform: capitalize;
-            padding-bottom: 3px; /* Creates space so it doesn't overlap */
+            padding-bottom: 3px;
+            /* Creates space so it doesn't overlap */
             opacity: 0.9;
         }
     </style>
 </head>
+
 <body class="bg-white text-slate-900 font-sans">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-emerald-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-2 md:py-3 flex justify-between items-center relative">
             <div class="flex items-center gap-2 md:gap-4">
                 <div class="hidden md:block w-24"></div>
-                
-                <img src="logo.png" alt="Logo" onerror="this.style.display='none'" 
+
+                <img src="logo.png" alt="Logo" onerror="this.style.display='none'"
                     class="h-16 w-auto object-contain md:h-24 md:absolute md:top-2 md:left-6 drop-shadow-md z-10">
 
                 <div class="flex flex-col border-l-2 border-emerald-100 pl-3 md:pl-4 whitespace-nowrap">
                     <div>
                         <span class="decorative-new" style="margin-bottom: -5px; display: block;">New</span>
                     </div>
-                    
-                    <span class="text-lg md:text-xl font-black text-emerald-900 tracking-tight uppercase leading-tight">Al Haramain</span>
-                    
+
+                    <span
+                        class="text-lg md:text-xl font-black text-emerald-900 tracking-tight uppercase leading-tight">Al
+                        Haramain</span>
+
                     <div class="flex flex-col">
-                        <span class="text-[10px] md:text-sm font-bold text-yellow-600 uppercase mt-0 leading-none">Tours & Travels</span>
-                        <span class="text-[7px] md:text-[9px] font-bold text-emerald-700 uppercase tracking-widest mt-0.5">Haj Group Organiser</span>
+                        <span class="text-[10px] md:text-sm font-bold text-yellow-600 uppercase mt-0 leading-none">Tours
+                            & Travels</span>
+                        <span
+                            class="text-[7px] md:text-[9px] font-bold text-emerald-700 uppercase tracking-widest mt-0.5">Haj
+                            Group Organiser</span>
                     </div>
                 </div>
             </div>
 
-            <div class="hidden lg:flex items-center space-x-8 font-bold text-[11px] uppercase tracking-widest text-emerald-950">
+            <div
+                class="hidden lg:flex items-center space-x-8 font-bold text-[11px] uppercase tracking-widest text-emerald-950">
                 <a href="#" class="hover:text-yellow-600 transition-colors">Home</a>
                 <a href="#holy-sites" class="hover:text-yellow-600 transition-colors">Holy Sites</a>
                 <a href="#requirements" class="hover:text-yellow-600 transition-colors">Checklist</a>
-                <a href="tel:+919866618803" class="bg-emerald-900 text-white px-5 py-2.5 rounded-full shadow-lg hover:bg-emerald-800 transition-all">+91 98666 18803</a>
+                <a href="tel:+919866618803"
+                    class="bg-emerald-900 text-white px-5 py-2.5 rounded-full shadow-lg hover:bg-emerald-800 transition-all">+91
+                    98666 18803</a>
             </div>
         </div>
     </nav>
@@ -85,9 +135,12 @@
     <section class="hero-container h-screen flex items-center justify-center text-center text-white px-6">
         <div class="hero-bg"></div>
         <div data-aos="fade-up" data-aos-duration="1500">
-            <span class="uppercase tracking-[0.4em] text-[10px] mb-6 block font-bold text-yellow-500">MoMA Approved Agency • Kurnool</span>
-            <h1 class="text-5xl md:text-7xl font-serif mb-8 leading-tight">Your Gateway to <br><span class="italic text-emerald-100 font-light text-4xl md:text-6xl">Spiritual Peace</span></h1>
-            <button onclick="openModal()" class="bg-emerald-600 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition-all font-bold uppercase text-xs tracking-[0.2em] shadow-xl">
+            <span class="uppercase tracking-[0.4em] text-[10px] mb-6 block font-bold text-yellow-500">MoMA Approved
+                Agency • Kurnool</span>
+            <h1 class="text-5xl md:text-7xl font-serif mb-8 leading-tight">Your Gateway to <br><span
+                    class="italic text-emerald-100 font-light text-4xl md:text-6xl">Spiritual Peace</span></h1>
+            <button onclick="openModal()"
+                class="bg-emerald-600 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition-all font-bold uppercase text-xs tracking-[0.2em] shadow-xl">
                 View Latest Packages
             </button>
         </div>
@@ -96,44 +149,57 @@
     <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <p class="text-emerald-600 font-bold uppercase tracking-[0.4em] text-[10px] mb-3">Certified Excellence</p>
+                <p class="text-emerald-600 font-bold uppercase tracking-[0.4em] text-[10px] mb-3">Certified Excellence
+                </p>
                 <h2 class="text-3xl font-serif text-slate-900">Trusted for Generations</h2>
                 <div class="w-16 h-1 bg-yellow-500 mx-auto mt-6"></div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-                
-                <div class="p-8 rounded-3xl bg-emerald-50 border border-emerald-100 transition-all group text-center" data-aos="fade-up">
+
+                <div class="p-8 rounded-3xl bg-emerald-50 border border-emerald-100 transition-all group text-center"
+                    data-aos="fade-up">
                     <div class="h-20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
                         <img src="ksa-hajj-logo.png" alt="KSA Logo" class="h-full w-auto object-contain">
                     </div>
                     <h4 class="font-bold text-emerald-900 mb-1 text-lg">KSA Registered</h4>
-                    <p class="text-[10px] uppercase font-bold text-emerald-600/60 tracking-widest mb-3">Ministry of Hajj & Umrah</p>
+                    <p class="text-[10px] uppercase font-bold text-emerald-600/60 tracking-widest mb-3">Ministry of Hajj
+                        & Umrah</p>
                     <p class="text-slate-500 text-sm">Official authorized organizer for groups from India.</p>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group text-center"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="h-20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
                         <img src="iata-logo.png" alt="IATA Logo" class="h-full w-auto object-contain">
                     </div>
                     <h4 class="font-bold text-slate-800 mb-1 text-lg">IATA Approved</h4>
-                    <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-3">Global Accreditation</p>
+                    <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-3">Global Accreditation
+                    </p>
                     <p class="text-slate-500 text-sm">International standards for travel and visa logistics.</p>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group text-center"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="h-20 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <img src="moma-logo.png" alt="MOMA Logo" class="h-full w-auto object-contain" style="filter: sepia(1) saturate(5) hue-rotate(100deg) brightness(0.8);">
+                        <img src="moma-logo.png" alt="MOMA Logo" class="h-full w-auto object-contain"
+                            style="filter: sepia(1) saturate(5) hue-rotate(100deg) brightness(0.8);">
                     </div>
                     <h4 class="font-bold text-slate-800 mb-1 text-lg">Govt. Recognized</h4>
                     <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-3">HGO Certified</p>
                     <p class="text-slate-500 text-sm">Recognized Haj Group Organizer by Govt. of India.</p>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-20 mb-6 flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform">
-                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                <div class="p-8 rounded-3xl bg-white border border-slate-100 hover:shadow-lg transition-all group text-center"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="h-20 mb-6 flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform">
+                        <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                         </svg>
                     </div>
                     <h4 class="font-bold text-slate-800 mb-1 text-lg">Family Care</h4>
@@ -154,19 +220,25 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="group relative h-[450px] rounded-[2rem] overflow-hidden shadow-2xl" data-aos="fade-right">
-                    <img src="makkah.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" alt="Makkah">
-                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 to-transparent flex items-end p-10">
+                    <img src="makkah.jpg"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" alt="Makkah">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 to-transparent flex items-end p-10">
                         <div>
-                            <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Masjid Al-Haram</span>
+                            <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Masjid
+                                Al-Haram</span>
                             <h3 class="text-3xl font-serif text-white mt-2">Makkah Al-Mukarramah</h3>
                         </div>
                     </div>
                 </div>
                 <div class="group relative h-[450px] rounded-[2rem] overflow-hidden shadow-2xl" data-aos="fade-left">
-                    <img src="madinah.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" alt="Madinah">
-                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 to-transparent flex items-end p-10">
+                    <img src="madinah.jpg"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-1000" alt="Madinah">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-emerald-950/80 to-transparent flex items-end p-10">
                         <div>
-                            <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Masjid Al-Nabawi</span>
+                            <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Masjid
+                                Al-Nabawi</span>
                             <h3 class="text-3xl font-serif text-white mt-2">Madinah Al-Munawwarah</h3>
                         </div>
                     </div>
@@ -177,23 +249,26 @@
 
     <div id="packageModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center px-4">
         <div class="absolute inset-0 bg-emerald-950/90 backdrop-blur-md" onclick="closeModal()"></div>
-        <div class="relative bg-white w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl border border-emerald-100">
+        <div
+            class="relative bg-white w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl border border-emerald-100">
             <div class="bg-emerald-900 p-8 text-white relative">
-                <button onclick="closeModal()" class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl">×</button>
-                <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-widest block mb-2">Confirmed June Departure</span>
+                <button onclick="closeModal()"
+                    class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl">×</button>
+                <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-widest block mb-2">Confirmed July
+                    Departure</span>
                 <h3 id="pkgTitle" class="text-3xl font-serif mb-1">Umrah Deluxe Package</h3>
                 <p class="text-emerald-300 text-xs font-medium italic">15 Days Spiritual Journey</p>
             </div>
-            
+
             <div class="p-8">
                 <div class="grid grid-cols-2 gap-4 mb-8">
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
                         <p class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter mb-1">Departure</p>
-                        <p class="text-sm font-bold text-emerald-900">28th June</p>
+                        <p class="text-sm font-bold text-emerald-900">29th July</p>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
                         <p class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter mb-1">Arrival</p>
-                        <p class="text-sm font-bold text-emerald-900">12th July</p>
+                        <p class="text-sm font-bold text-emerald-900">12th August</p>
                     </div>
                     <div class="col-span-2 bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100">
                         <div class="flex justify-between items-center px-2">
@@ -204,16 +279,92 @@
                             </div>
                             <div class="text-right">
                                 <p class="text-[9px] uppercase font-bold text-emerald-600 mb-1">Madinah Hotel</p>
-                                <p class="text-xs font-bold text-slate-800">Odst Al Madina</p>
+                                <p class="text-xs font-bold text-slate-800">Guest Time Hotel</p>
                                 <p class="text-[8px] text-yellow-600">★★★ or Similar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Premium Flight Route Section -->
+                    <div class="col-span-2 bg-amber-50/60 p-4 rounded-2xl border border-amber-100/80">
+                        <div class="flex justify-between items-center mb-3">
+                            <p class="text-[9px] uppercase font-bold text-amber-800 tracking-wider">Flight Itinerary</p>
+                            <span
+                                class="bg-amber-100 text-amber-900 text-[8px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wide">Medina
+                                Return (No Bus Transit!)</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 px-1">
+                            <!-- Outbound Route -->
+                            <div class="flex items-center gap-2 flex-1">
+                                <div class="text-left flex-shrink-0">
+                                    <span class="text-sm font-extrabold text-amber-950 block leading-tight">HYD</span>
+                                    <span class="text-[8px] text-amber-800/60 block">Hyderabad</span>
+                                </div>
+
+                                <div class="flex flex-col items-center flex-grow min-w-[30px] relative">
+                                    <span class="text-[8px] text-amber-700/60 font-medium mb-0.5">Outbound</span>
+                                    <div class="w-full flex items-center justify-center relative">
+                                        <div
+                                            class="absolute left-0 right-0 h-[1px] bg-amber-200 border-dashed border-t">
+                                        </div>
+                                        <div class="z-10 bg-amber-50 px-1 text-amber-700">
+                                            <!-- Plane Icon going right -->
+                                            <svg class="w-3.5 h-3.5 transform rotate-90" fill="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5l8 2.5z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-right flex-shrink-0">
+                                    <span class="text-sm font-extrabold text-amber-950 block leading-tight">JED</span>
+                                    <span class="text-[8px] text-amber-800/60 block">Jeddah</span>
+                                </div>
+                            </div>
+
+                            <!-- Vertical Divider -->
+                            <div class="h-8 w-px bg-amber-200/60 mx-1"></div>
+
+                            <!-- Inbound Route -->
+                            <div class="flex items-center gap-2 flex-1">
+                                <div class="text-left flex-shrink-0">
+                                    <span class="text-sm font-extrabold text-amber-950 block leading-tight">MED</span>
+                                    <span class="text-[8px] text-amber-800/60 block">Medina</span>
+                                </div>
+
+                                <div class="flex flex-col items-center flex-grow min-w-[30px] relative">
+                                    <span class="text-[8px] text-amber-700/60 font-medium mb-0.5">Inbound</span>
+                                    <div class="w-full flex items-center justify-center relative">
+                                        <div
+                                            class="absolute left-0 right-0 h-[1px] bg-amber-200 border-dashed border-t">
+                                        </div>
+                                        <div class="z-10 bg-amber-50 px-1 text-amber-700">
+                                            <!-- Plane Icon going right -->
+                                            <svg class="w-3.5 h-3.5 transform rotate-90" fill="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5l8 2.5z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-right flex-shrink-0">
+                                    <span class="text-sm font-extrabold text-amber-950 block leading-tight">HYD</span>
+                                    <span class="text-[8px] text-amber-800/60 block">Hyderabad</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <p class="text-slate-500 text-sm text-center mb-6">Package price starts from <span class="text-emerald-700 font-bold">Rs. 1,05,000</span>. Includes flights (HYD-JED-HYD), 5-star Makkah stay, and guided tours.</p>
-                
-                <a id="pkgWhatsapp" href="#" class="w-full bg-emerald-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-600 transition-all shadow-lg">
+                <p class="text-slate-500 text-sm text-center mb-6">Package price starts from <span
+                        class="text-emerald-700 font-bold">Rs. 1,10,000</span>. Includes return flights (HYD-JED,
+                    MED-HYD), premium stays, and guided tours.</p>
+
+                <a id="pkgWhatsapp" href="#"
+                    class="w-full bg-emerald-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-emerald-600 transition-all shadow-lg">
                     Book Now via WhatsApp
                 </a>
             </div>
@@ -224,23 +375,29 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 border-b border-emerald-900 pb-12">
             <div>
                 <div class="flex items-center gap-3 mb-6">
-                    <img src="logo.png" alt="Logo" onerror="this.style.display='none'" class="h-12 w-auto brightness-200">
+                    <img src="logo.png" alt="Logo" onerror="this.style.display='none'"
+                        class="h-12 w-auto brightness-200">
                     <h4 class="text-white font-bold italic tracking-wider">NEW AL HARAMAIN TOURS AND TRAVELS</h4>
                 </div>
-                <p class="text-sm leading-relaxed">Serving the pilgrims for 16+ years with trust and dedication. MoMA Approved Agency.</p>
+                <p class="text-sm leading-relaxed">Serving the pilgrims for 16+ years with trust and dedication. MoMA
+                    Approved Agency.</p>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Our Location</h4>
                 <p class="text-sm mb-2 text-white font-medium">#40/306, Near Reddy Timber, Bhagya Nagar</p>
                 <p class="text-sm mb-4">Kurnool, AP - 518004</p>
-                <a href="https://maps.google.com" target="_blank" class="text-yellow-500 text-xs font-bold uppercase underline">Get Directions</a>
+                <a href="https://maps.google.com" target="_blank"
+                    class="text-yellow-500 text-xs font-bold uppercase underline">Get Directions</a>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Accreditations</h4>
                 <div class="space-y-2">
-                    <p class="text-[10px] uppercase font-bold tracking-widest">IATA Member: <span class="text-white ml-2">Verified</span></p>
-                    <p class="text-[10px] uppercase font-bold tracking-widest">HGO India: <span class="text-white ml-2">Registered</span></p>
-                    <p class="text-[10px] uppercase font-bold tracking-widest">KSA Ministry: <span class="text-white ml-2">Approved</span></p>
+                    <p class="text-[10px] uppercase font-bold tracking-widest">IATA Member: <span
+                            class="text-white ml-2">Verified</span></p>
+                    <p class="text-[10px] uppercase font-bold tracking-widest">HGO India: <span
+                            class="text-white ml-2">Registered</span></p>
+                    <p class="text-[10px] uppercase font-bold tracking-widest">KSA Ministry: <span
+                            class="text-white ml-2">Approved</span></p>
                 </div>
             </div>
         </div>
@@ -250,25 +407,29 @@
     </footer>
 
     <a href="https://wa.me/919866618803" class="whatsapp-float group">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607z" />
+        </svg>
         <span class="text-sm uppercase tracking-tight font-bold">WhatsApp Desk</span>
     </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 1000 });
-        
+
         function openModal() {
             // Setting the WhatsApp message to include the specific dates
-            const message = encodeURIComponent("Assalamu Alaikum, I am interested in your 15 Days Umrah Deluxe Package departing on 28th June. Please share more details.");
+            const message = encodeURIComponent("Assalamu Alaikum, I am interested in your 15 Days Umrah Deluxe Package departing on 29th July (HYD-JED & MED-HYD flights). Please share more details.");
             document.getElementById('pkgWhatsapp').href = "https://wa.me/919866618803?text=" + message;
-            
+
             document.getElementById('packageModal').classList.remove('hidden');
         }
 
-        function closeModal() { 
-            document.getElementById('packageModal').classList.add('hidden'); 
+        function closeModal() {
+            document.getElementById('packageModal').classList.add('hidden');
         }
     </script>
 </body>
+
 </html>
