@@ -354,7 +354,7 @@
             <div class="bg-emerald-900 p-8 text-white relative">
                 <button onclick="closeModal()"
                     class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl">×</button>
-                <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-widest block mb-2">Confirmed July
+                <span class="text-yellow-500 text-[10px] font-bold uppercase tracking-widest block mb-2">Confirmed November
                     Departure</span>
                 <h3 id="pkgTitle" class="text-3xl font-serif mb-1">Umrah Deluxe Package</h3>
                 <p class="text-emerald-300 text-xs font-medium italic">15 Days Spiritual Journey</p>
@@ -364,7 +364,7 @@
                 <div class="grid grid-cols-2 gap-4 mb-8">
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
                         <p class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter mb-1">Departure</p>
-                        <p class="text-sm font-bold text-emerald-900">22th November</p>
+                        <p class="text-sm font-bold text-emerald-900">22nd November</p>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
                         <p class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter mb-1">Arrival</p>
@@ -380,7 +380,7 @@
                             <div class="text-right">
                                 <p class="text-[9px] uppercase font-bold text-emerald-600 mb-1">Madinah Hotel</p>
                                 <p class="text-xs font-bold text-slate-800">Mukhtara Plaza</p>
-                                <p class="text-[8px] text-yellow-600">★★★ or Similar</p>
+                                <p class="text-[8px] text-yellow-600">★★★</p>
                             </div>
                         </div>
                     </div>
@@ -452,7 +452,7 @@
                 </div>
 
                 <p class="text-slate-500 text-sm text-center mb-6">Package price starts from <span
-                        class="text-emerald-700 font-bold">Rs. 1,10,000</span>. Includes return flights (HYD-JED,
+                        class="text-emerald-700 font-bold">Rs. 1,25,000</span>. Includes return flights (HYD-JED,
                     JED-HYD), premium stays, and guided tours.</p>
 
                 <a id="pkgWhatsapp" href="#"
@@ -469,14 +469,14 @@
             <div class="flex items-center gap-2.5">
                 <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
                 <div>
-                    <h4 class="font-bold text-sm leading-tight">Al-Haramain Assistant</h4>
+                    <h4 class="font-bold text-sm leading-tight">AL-Haramain Assistant</h4>
                     <p class="text-[10px] text-emerald-200">Online | AI Support</p>
                 </div>
             </div>
             <button onclick="toggleChat()" class="text-white/60 hover:text-white text-xl font-bold p-1">✕</button>
         </div>
         <div id="chat-messages" class="chat-messages">
-            <div class="message-bubble message-assistant">Assalamu Alaikum! I am the Al-Haramain virtual assistant. How can I assist you with your Umrah, Hajj, or travel queries today?</div>
+            <div class="message-bubble message-assistant">Assalamu Alaikum! I am the AL-Haramain virtual assistant. How can I assist you with your Umrah, Hajj, or travel queries today?</div>
         </div>
         <div class="p-3 bg-white border-t border-slate-100 flex items-center gap-2">
             <input id="chat-input" type="text" placeholder="Ask about packages, dates..."
@@ -549,7 +549,7 @@
         AOS.init({ once: true, duration: 1000 });
 
         function openModal() {
-            const message = encodeURIComponent("Assalamu Alaikum, I am interested in your 15 Days Umrah Deluxe Package departing on 29th July (HYD-JED & MED-HYD flights). Please share more details.");
+            const message = encodeURIComponent("Assalamu Alaikum, I am interested in your 15 Days Umrah Deluxe Package departing on 22nd November (HYD-JED & JED-HYD flights). Please share more details.");
             document.getElementById('pkgWhatsapp').href = "https://wa.me/919866618803?text=" + message;
             document.getElementById('packageModal').classList.remove('hidden');
         }
