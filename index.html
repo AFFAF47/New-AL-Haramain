@@ -187,10 +187,52 @@
             0%, 80%, 100% { transform: scale(0); }
             40% { transform: scale(1); }
         }
+
+        @keyframes marquee-scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .animate-marquee-smooth {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee-scroll 28s linear infinite;
+        }
+
+        .animate-marquee-smooth:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 
 <body class="bg-white text-slate-900 font-sans">
+
+    <!-- Top Announcement Banner -->
+    <div class="bg-emerald-950 text-white text-xs border-b border-emerald-800/80 sticky top-0 z-[60]">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
+            
+            <!-- Left Section with Badge & Marquee Mask -->
+            <div class="flex items-center gap-3 flex-1 min-w-0 overflow-hidden">
+                <!-- Solid Static Badge (Never overlapped) -->
+                <div class="bg-yellow-500 text-emerald-950 text-[9px] font-black uppercase px-2.5 py-1 rounded-full tracking-wider flex-shrink-0 z-10 shadow-sm">
+                    Announcement
+                </div>
+                
+                <!-- Sliding Text Track Mask -->
+                <div class="overflow-hidden relative w-full flex items-center">
+                    <div class="animate-marquee-smooth font-medium text-emerald-100 text-[11px] sm:text-xs">
+                        ✨ <strong>Hajj 2027 Registration Open for Inquiries:</strong> Planning underway for May 2027 • Standard Package (30–35 Days) & Short Package (17–20 Days) • VIP Moallim, Zone 2 & Category A Services • Limited slots!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Pre-Register CTA -->
+            <a href="https://wa.me/919866618803?text=Assalamu%20Alaikum,%20I%20would%20like%20early%20information%20for%20Hajj%202027%20packages." 
+            class="hidden sm:inline-flex items-center text-yellow-400 font-bold hover:text-yellow-300 text-[11px] uppercase tracking-wider flex-shrink-0 transition-colors pl-2 border-l border-emerald-800/80">
+                Pre-Register →
+            </a>
+        </div>
+    </div>
 
     <nav class="fixed w-full z-50 glass-nav border-b border-emerald-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-2 md:py-3 flex justify-between items-center relative">
@@ -304,6 +346,82 @@
                     <h4 class="font-bold text-slate-800 mb-1 text-lg">Family Care</h4>
                     <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-3">Dedicated Support</p>
                     <p class="text-slate-500 text-sm">Special assistance for elderly pilgrims and families.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Hajj 2027 Section -->
+    <section id="upcoming-hajj" class="py-16 bg-slate-50 border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-emerald-800 font-bold uppercase tracking-[0.3em] text-[10px] bg-emerald-100 px-3 py-1 rounded-full">Advance Planning</span>
+                <h2 class="text-3xl font-serif text-slate-900 mt-3">Hajj 2027 Tentative Packages</h2>
+                <p class="text-slate-500 text-xs mt-2">Planned for May 2027 • Exact flight schedules and hotels will be finalized soon</p>
+                <div class="w-16 h-0.5 bg-yellow-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+                
+                <!-- Standard Package Card (30-35 Days) -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg">Option 01</span>
+                            <span class="text-xs font-semibold text-slate-400">May 2027 Departure</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Standard Hajj Package</h3>
+                        <p class="text-2xl font-black text-emerald-900 mt-1 mb-4">30 – 35 Days <span class="text-xs font-normal text-slate-500 italic block">Complete & Relaxed Spiritual Journey</span></p>
+
+                        <!-- Service Badges -->
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[10px] font-bold uppercase bg-emerald-900 text-emerald-100 px-2.5 py-1 rounded-md">VIP Moallim</span>
+                            <span class="text-[10px] font-bold uppercase bg-yellow-100 text-yellow-900 px-2.5 py-1 rounded-md">Zone 2</span>
+                            <span class="text-[10px] font-bold uppercase bg-emerald-100 text-emerald-900 px-2.5 py-1 rounded-md">Category A Services</span>
+                        </div>
+
+                        <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Full extended stay in Makkah Mukarramah & Madinah Munawwarah</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Premium tent allocations & Mina/Arafat guidance</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Dedicated experienced group leaders throughout</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919866618803?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%20Standard%20Hajj%20Package%20(30-35%20days)%20with%20VIP%20Moallim%20planned%20for%20May%202027." 
+                    class="w-full text-center py-3.5 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+                        Inquire Standard Package
+                    </a>
+                </div>
+
+                <!-- Short Package Card (17-20 Days) -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-yellow-800 bg-yellow-50 px-2.5 py-1 rounded-lg">Option 02</span>
+                            <span class="text-xs font-semibold text-slate-400">May 2027 Departure</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Short Duration Hajj Package</h3>
+                        <p class="text-2xl font-black text-emerald-900 mt-1 mb-4">17 – 20 Days <span class="text-xs font-normal text-slate-500 italic block">Specially Designed for Working Professionals</span></p>
+
+                        <!-- Service Badges -->
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[10px] font-bold uppercase bg-emerald-900 text-emerald-100 px-2.5 py-1 rounded-md">VIP Moallim</span>
+                            <span class="text-[10px] font-bold uppercase bg-yellow-100 text-yellow-900 px-2.5 py-1 rounded-md">Zone 2</span>
+                            <span class="text-[10px] font-bold uppercase bg-emerald-100 text-emerald-900 px-2.5 py-1 rounded-md">Category A Services</span>
+                        </div>
+
+                        <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Compact schedule focused on core Manasik-e-Hajj</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Premium tent allocations & VIP transport links</li>
+                            <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Direct flight options & dedicated logistical support</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/919866618803?text=Assalamu%20Alaikum,%20I%20am%20interested%20in%20the%20Short%20Hajj%20Package%20(17-20%20days)%20with%20VIP%20Moallim%20planned%20for%20May%202027." 
+                    class="w-full text-center py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+                        Inquire Short Package
+                    </a>
                 </div>
 
             </div>
